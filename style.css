@@ -1,13 +1,16 @@
 header {
+    display: block;
     background-color: #262b4d;
     height: 100px;
 }
 
 body {
+    display: block;
     background-color: #1174b6;
     margin: 0;
 }
 
 .logoCSPheader {
-    height: 50px;
+    height: 100px;
+    margin: 10px;
 }
