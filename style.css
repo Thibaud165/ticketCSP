@@ -1,7 +1,7 @@
 header {
     display: block;
     background-color: #262b4d;
-    height: 100px;
+    height: min-content;
 }
 
 body {
@@ -13,4 +13,11 @@ body {
 .logoCSPheader {
     height: 100px;
     margin: 10px;
+}
+
+header h1 {
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
 }
