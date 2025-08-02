@@ -1,7 +1,8 @@
 header {
     display: inline;
     background-color: #262b4d;
-    height: min-content;
+    height: 120px;
+    width: 100%;
 }
 
 body {
