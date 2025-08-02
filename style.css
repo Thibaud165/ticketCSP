@@ -1,8 +1,9 @@
 header {
-    display: inline;
+    display: flex;
+    align-items: center;
     background-color: #262b4d;
     height: 120px;
-    width: 100%;
+    width: min-content;
 }
 
 body {
