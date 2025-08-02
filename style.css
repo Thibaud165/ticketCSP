@@ -2,8 +2,8 @@ header {
     display: flex;
     align-items: center;
     background-color: #262b4d;
-    height: 120px;
-    width: min-content;
+    height: min-content;
+    width: 100%;
 }
 
 body {
