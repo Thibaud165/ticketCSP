@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Liste des Tickets</title>
+  <style>
+    body {
+      background-color: #0077b6;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .ticket {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #ddd;
+      border-radius: 10px;
+      padding: 10px 20px;
+      margin-bottom: 10px;
+      color: black;
+    }
+    .ticket:nth-child(even) {
+      background-color: #bbb;
+    }
+    .ticket span {
+      width: 120px;
+    }
+    .btn {
+      border: none;
+      padding: 6px 12px;
+      font-weight: bold;
+      border-radius: 12px;
+      color: white;
+      box-shadow: 0 2px 0 rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+    .utilise {
+      background-color: red;
+    }
+    .inutile {
+      background-color: limegreen;
+    }
+    .utiliser-btn {
+      background-color: dodgerblue;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="color: white;">Gestionnaire de Tickets</h1>
+  <div id="ticketList"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+  <script>
+    // Chargement automatique du fichier "codes.csv"
+    fetch('codes.csv')
+      .then(response => {
+        if (!response.ok) throw new Error("Fichier non trouvé");
+        return response.text();
+      })
+      .then(csvText => {
+        const results = Papa.parse(csvText, {
+          header: true,
+          skipEmptyLines: true
+        });
+        const data = results.data;
+        const container = document.getElementById("ticketList");
+        container.innerHTML = "";
+
+        data.forEach(row => {
+          const div = document.createElement("div");
+          div.className = "ticket";
+          div.innerHTML = `
+            <div>
+              <strong>${row.prenom}</strong><br>
+              <small>${row.nom}</small>
+            </div>
+            <span>${row["code-complet"]}</span>
+            ${row.utiliser === "oui" ? 
+              `<button class="btn utilise">Utilisé</button>` : 
+              `<div>
+                <button class="btn inutile">Inutilisé</button>
+                <button class="btn utiliser-btn">Utiliser</button>
+              </div>`
+            }
+          `;
+          container.appendChild(div);
+        });
+      })
+      .catch(error => {
+        document.getElementById("ticketList").innerHTML = `<p style="color: white;">Erreur : ${error.message}</p>`;
+      });
+  </script>
+</body>
+</html>

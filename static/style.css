@@ -1,0 +1,39 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #262b4d;
+    height: min-content;
+    width: 100%;
+}
+
+body {
+    display: block;
+    background-color: #1174b6;
+    margin: 0;
+}
+
+.logoCSPheader {
+    height: 100px;
+    margin: 10px;
+}
+
+header h1 {
+    font-family: "Comfortaa", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: #fff;
+}
+
+.tableau {
+    align-content: center;
+    justify-content: center;
+}
+
+.case {
+    background-color: rgb(255, 255, 255);
+    width: auto;
+    margin-left: 100px;
+    margin-right: 100px;
+}

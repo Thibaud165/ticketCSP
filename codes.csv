@@ -1,0 +1,6 @@
+nom,prenom,categorie,vetement,code,code-complet,utiliser
+Jourdan,Léane,U13,Reversible,00001,#00001-léaneLÉANE-U13-Maillot-Short,non
+Jourdan,Quentin,U15,T-shirt,00002,#00002-quentinQUENTIN-U15-Maillot-Short,oui
+Jourdan,Thibaud,U18,Pull,00003,#00003-thibaudTHIBAUD-U18-Pull,oui
+Jourdan,Aurélie,Loisir,Maillot,00004,#00004-aurélieAURÉLIE-Loisir-Chasuble,non
+Jourdan,Franck,Loisir,Chasuble,00005,#00005-franckFRANCK-Loisir-Chasuble,non
